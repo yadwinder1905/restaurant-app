@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panjabi Tadka</title>
+    <link rel="stylesheet" href="pay.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animsition.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-left">
+            <h1><a href="index.html">Panjabi Tadka</a></h1>
+        </div>
+        <div class="header-right">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="table_booking.html">TableBooking</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="registration.html">Registration</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <section class="hero">
+        <img src="images/pexels-pixabay-260922.jpg" alt="Beautiful Picture">
+        <div class="container">
+            <div class="payment-summary">
+                <h2>Cart Summary</h2>
+
+                <div class="summary-item">
+                    <span class="item-label">Delivery Charges</span>
+                    <span class="item-value">Free</span>
+                </div>
+
+                <div class="summary-item total">
+                    <span class="item-label">Total</span>
+                    <span class="item-value" id="totalAmount">$0.00</span>
+                </div>
+            </div>
+
+            <div class="payment-methods">
+                <h3>Select Payment Method</h3>
+                <div class="payment-option">
+                    <input type="radio" id="cash-on-delivery" name="payment-method" value="cash-on-delivery">
+                    <label for="cash-on-delivery">Cash on Delivery</label>
+                </div>
+                <div class="payment-option">
+                    <input type="radio" id="paypal" name="payment-method" value="paypal">
+                    <label for="paypal">Paypal</label>
+                </div>
+            </div>
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+
+                    var totalAmount = parseFloat(sessionStorage.getItem('totalAmount'));
+
+                    const totalAmountElement = document.getElementById("totalAmount");
+                    totalAmountElement.textContent = "$" + totalAmount.toFixed(2);
+                });
+
+            </script>
+
+            <a href="card_details.html"><button id="finishPayment">Finish Payment</button></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Restaurant Name. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

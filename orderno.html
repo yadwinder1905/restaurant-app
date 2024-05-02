@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panjabi Tadka</title>
+    <link rel="stylesheet" href="orderno.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-left">
+            <h1><a href="index.html">Panjabi Tadka</a></h1>
+        </div>
+        <div class="header-right">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="table_booking.html">TableBooking</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="registration.html">Registration</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="container">
+        <h1>Order Placed Successfully</h1>
+        <p>Thank you for Ordering at <span class="highlight">Panjabi Tadka</span>.</p>
+        <p>Your Order Number: <strong>499924164442386508</strong></p>
+    </div>
+
+    <div class="logout-container">
+        <button id="logoutButton">Logout</button>
+    </div>
+
+
+    <script>
+        document.getElementById("logoutButton").addEventListener("click", function () {
+            window.location.href = "index.html";
+        });
+    </script>
+
+
+    <footer>
+        <p>&copy; 2024 Restaurant Name. All rights reserved.</p>
+    </footer>
+
+
+</body>
+
+</html>
